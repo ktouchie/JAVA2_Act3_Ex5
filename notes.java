@@ -7,6 +7,22 @@ class notes {
         
     }
     
-    
+    public static double percentage_pass(int[][] a) {
+        int total = notes.length;
+        int pass = 0;
+        int sum = 0;
+        
+        for (int i=0; i<total; i++) {
+            for (int j=0; i<notes[i].length; j++) {
+                sum += notes[i][j];
+            }
+            if (((double)sum/(notes[i].length))>10) {
+                pass++;
+            }
+            sum=0;
+        }
+        
+        return (((double)pass)/total);
+    }
     
 }
